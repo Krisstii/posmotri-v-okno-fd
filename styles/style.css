@@ -48,7 +48,7 @@ ol {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
 }
@@ -56,8 +56,9 @@ ol {
 .content {
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
   gap: 30px;
+  width: 1140px;
   margin: auto;
 }
 
@@ -74,6 +75,7 @@ ol {
 /* result */
 
 .result {
+  width: 711px;
   display: flex;
   flex-direction: column;
   justify-items: flex-end;
@@ -101,14 +103,18 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-family: "Fira Sans Condensed", "sans-serif";
+  font-family:'Fira Sans Condensed', 'sans-serif';
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 
 .search-form__fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
   border: none;
 }
 
@@ -136,7 +142,7 @@ ol {
 }
 
 .title {
-  font-family: Oswald, sans-serif;
+  font-family: 'Oswald', 'sans-serif';
   font-weight: 700;
   font-style: normal;
   font-size: 75px;
@@ -144,7 +150,6 @@ ol {
   letter-spacing: 0;
   text-transform: uppercase;
   width: 259px;
-  height: 210px;
 }
 
 .content__accent {
@@ -155,18 +160,14 @@ ol {
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 566px;
   gap: 30px;
-}
-
-.custom-scrollbar {
-  scroll-behavior: smooth;
-  overflow: auto;
   height: 298px;
 }
 
 .content__list {
+  overflow: auto;
   display: flex;
+  height: 298px;
   flex-direction: column;
   gap: 30px;
 }
@@ -177,7 +178,11 @@ ol {
   text-decoration: none;
 }
 
-.content__card-link_current:active {
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link_current {
   background-color: #545050;
 }
 
@@ -206,18 +211,26 @@ ol {
 }
 
 .content__video-card-title {
-  font-family: "Oswald", "sans-serif";
+  font-family: 'Oswald', 'sans-serif';
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 700;
+  line-height: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: 30px;
   display: -webkit-box;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
   line-clamp: 4;
+  margin-bottom: 6px;
 }
 
 .content__video-card-description {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
   line-height: 16.2px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -292,7 +305,7 @@ ol {
 /* кнопки */
 
 .button {
-  height: 34px;
+  min-height: 34px;
   border: 1px solid #fff;
   background-color: transparent;
   color: #fff;
@@ -316,6 +329,7 @@ ol {
 
 .button:focus-visible {
   outline: 1px solid #fff;
+  outline-offset: 1px solid #fff;
 }
 
 .search-form__submit-button {
@@ -326,3 +340,4 @@ ol {
 .more-button {
   width: 100%;
 }
+
