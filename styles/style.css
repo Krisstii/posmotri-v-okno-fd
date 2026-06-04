@@ -161,12 +161,12 @@ ol {
   flex-direction: column;
   gap: 30px;
   height: 298px;
+  overflow: auto;
+  width: 399px;
 }
 
 .content__list {
-  overflow: auto;
   display: flex;
-  height: 298px;
   flex-direction: column;
   gap: 30px;
 }
@@ -213,10 +213,11 @@ ol {
   font-family: "Oswald", "sans-serif";
   text-transform: uppercase;
   font-weight: 700;
-  line-height: 100%;
+  line-height: 30px;
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: 30px;
+  max-width: 192px;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
@@ -328,7 +329,7 @@ ol {
 
 .button:focus-visible {
   outline: 1px solid #fff;
-  outline-offset: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .search-form__submit-button {
